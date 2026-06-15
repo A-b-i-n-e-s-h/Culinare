@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Culinare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="login-row">
+            <div class="login-left">
+                <img src="assests/img/login-banner.png">
+            </div>
+            <div class="login-right">
+                <div class="login-right-container">
+                    <div class="logo-login">
+                        <img src="assests/img/Culinare.png">
+                        <p>Experience the finest restaurant-quality cuisine curated
+                            from the city's most prestigious kitchens.</p>
+                    </div>
+                    <div class="form-container">
+                        <h2>Welcome</h2>
+                        <p>Enter your details to manage your wealth.</p>
+                        <form id="loginForm">
+                            <label for="input-email" class="form-label">Email Address</label><br>
+                            <input type="text" class="form-control" id="input-email" placeholder="name@company.com"
+                                onkeyup="validateEmail()" autofocus required><br>
+                            <p id="emailError"></p><br>
+
+                            <div class="pass-flex">
+                                <label for="input-password" class="form-label">Password</label>
+                                <p>Forgot password?</p>
+                            </div>
+
+                            <input type="password" class="form-control" id="input-password" placeholder="Password"
+                                onkeyup="validatePassword()" required><br>
+                            <p>
+                            <p id="passwordError"></p>
+                            </p><br>
+                            <div class="checkbox-flex">
+                                <input type="checkbox" id="keep-me-singned">
+                                <label for="keep-me-singned" class="checkbox-content">Keep me signed in</label>
+                            </div>
+
+
+                            <button type="submit" class="btn-login">Sign In &RightArrow;</button>
+                            <p id="msg"></p>
+                        </form>
+                        <div class="create-account">
+                            <hr>
+                            <div class="login-footer">
+                                <p>Don't have an account? </p>
+                                <a href="register.html"><span>Create Account</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
