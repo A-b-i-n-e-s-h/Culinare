@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="home-header">
+        <div class="header-left">
+            <div class="logo">
+                <h2>Culinare</h2>
+            </div>
+            <ul>
+                <li ><a class="atag" href="home.html">Home</a></li>
+                <li class="li-active" ><a class="atag  li-active" href="menu.html">Menu</a></li>
+                <li><a class="atag" href="checkout.html">Orders</a></li>
+            </ul>
+        </div>
+        <div class="header-right gap24">
+            <input type="search" id="home-search" placeholder="Search for dishes..">
+            <div class="cart" >
+                <a href="checkout.html"><img src="assests/img/cartlogo.svg" alt="cart"></a>
+            </div>
+            <div class="notification-logo">
+                <img src="assests/img/notificatiologo.svg" alt="cart">
+            </div>
+            <div class="login-btn" id="login-transform">
+                <button onclick="window.location.href='index.html'">Login</button>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="menu-container">
+        <div class="menu-grid">
+            <div class="sidebar">
+                <h3>CATEGORIES</h3>
+                <ul>
+                    <li class="active-menu">Featured</li>
+                    <li>Main Courses</li>
+                    <li>Appetizers</li>
+                    <li>Desserts</li>
+                    <li>Bevarages</li>
+
+                    <div class="free-delivery-box">
+                        <h3>Free Delivery</h3>
+                        <p>On orders over $50. Order now to
+                            save!</p>
+                        <button class="learn-more-btn">Learn More</button>
+                    </div>
+                </ul>
+            </div>
+            <div class="menubar">
+                <div class="food-card">
+                    <img src="assests/img/food1.jpg">
+                    <div class="food-des">
+                        <div>
+                            <h3>Truffle Tagliatelle</h3>
+                            <p>Fresh handmade and tasty truffle...</p>
+                        </div>
+                        <div class="price-tag">
+                            <p>$24.00</p>
+                        </div>
+                    </div>
+                    <div class="qty-add-btn">
+                        <div class="qty-btn">
+                            <button class="minus" data-id="1">&minus;</button>
+                            <span id="qty-count" data-id="1">0</span>
+                            <button class="plus" data-id="1">&plus;</button>
+                        </div>
+                        <div class="add-to-cart" data-id="1">
+                            <button class="add-to-cart"  data-id="1">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="assests/img/fooood2.png">
+                    <div class="food-des">
+                        <div>
+                            <h3>Queen Margherita</h3>
+                            <p>Fresh handmade and tasty truffle...</p>
+                        </div>
+                        <div class="price-tag">
+                            <p>$24.00</p>
+                        </div>
+                    </div>
+                    <div class="qty-add-btn">
+                        <div class="qty-btn">
+                            <button>&minus;</button>
+                            <span>0</span>
+                            <button>&plus;</button>
+                        </div>
+                        <div  class="add-to-cart" data-id="2">
+                            <button class="add-to-cart"  data-id="2">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="assests/img/food3.jpg">
+                    <div class="food-des">
+                        <div>
+                            <h3>Avocado Artisan</h3>
+                            <p>Fresh handmade and tasty truffle...</p>
+                        </div>
+                        <div class="price-tag">
+                            <p>$24.00</p>
+                        </div>
+                    </div>
+                    <div class="qty-add-btn">
+                        <div class="qty-btn">
+                            <button>&minus;</button>
+                            <span>0</span>
+                            <button>&plus;</button>
+                        </div>
+                        <div  class="add-to-cart" data-id="3">
+                            <button class="add-to-cart"  data-id="3">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="assests/img/food 4.png">
+                    <div class="food-des">
+                        <div>
+                            <h3>Truffle Tagliatelle</h3>
+                            <p>Fresh handmade and tasty truffle...</p>
+                        </div>
+                        <div class="price-tag">
+                            <p>$24.00</p>
+                        </div>
+                    </div>
+                    <div class="qty-add-btn">
+                        <div class="qty-btn">
+                            <button>&minus;</button>
+                            <span>0</span>
+                            <button>&plus;</button>
+                        </div>
+                        <div  class="add-to-cart" data-id="4">
+                            <button class="add-to-cart"  data-id="4">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="assests/img/food5.png">
+                    <div class="food-des">
+                        <div>
+                            <h3>Truffle Tagliatelle</h3>
+                            <p>Fresh handmade and tasty truffle...</p>
+                        </div>
+                        <div class="price-tag">
+                            <p>$24.00</p>
+                        </div>
+                    </div>
+                    <div class="qty-add-btn">
+                        <div class="qty-btn">
+                            <button>&minus;</button>
+                            <span>0</span>
+                            <button>&plus;</button>
+                        </div>
+                        <div  class="add-to-cart" data-id="5">
+                            <button class="add-to-cart"  data-id="5">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <img src="assests/img/food6.png">
+                    <div class="food-des">
+                        <div>
+                            <h3>Truffle Tagliatelle</h3>
+                            <p>Fresh handmade and tasty truffle...</p>
+                        </div>
+                        <div class="price-tag">
+                            <p>$24.00</p>
+                        </div>
+                    </div>
+                    <div class="qty-add-btn">
+                        <div class="qty-btn">
+                            <button>&minus;</button>
+                            <span>0</span>
+                            <button>&plus;</button>
+                        </div>
+                        <div class="add-to-cart" data-id="6">
+                            <button class="add-to-cart"  data-id="6">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div>
+            <div class="footer-container">
+                <div>
+                    <h2 class="footer-logo">Culinare</h2>
+                    <p>Bringing the world's most exquisite
+                        flavors to your doorstep with elegance
+                        and speed.</p>
+                </div>
+                <div>
+                    <ul class="no-style-list">
+                        <li>Platforms</li>
+                        <li>About us</li>
+                        <li>Restaurants</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="no-style-list">
+                        <li>Support</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Support</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flexitend">
+                        <p class="page-nos-round1 centerit"><img src="assests/img/share.svg"></p>
+                        <p class="page-nos-round1 centerit"><img src="assests/img/web.svg"></p>
+                    </div>
+                    <p class="copyryt">© 2024 Culinare Epicurean. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="home.js"></script>
+    <script src="product.js"></script>
+    <script src="cart.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+
+</html>

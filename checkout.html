@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="home-header">
+        <div class="header-left">
+            <div class="logo">
+                <h2>Culinare</h2>
+            </div>
+            <ul>
+                <li><a class="atag" href="home.html">Home</a></li>
+                <li><a class="atag" href="menu.html">Menu</a></li>
+                <li class="li-active ">Orders</li>
+            </ul>
+        </div>
+        <div class="header-right gap24">
+            <input type="search" id="home-search" placeholder="Search for dishes..">
+            <div class="cart">
+                <img src="assests/img/cartlogo.svg" alt="cart">
+            </div>
+            <div class="notification-logo">
+                <img src="assests/img/notificatiologo.svg" alt="cart">
+            </div>
+            <div class="login-btn" id="login-transform">
+                <button onclick="window.location.href='index.html'">Login</button>
+            </div>
+        </div>
+
+    </header>
+
+
+    <section class="checkout-container">
+
+        <div class="checkout-grid">
+            <div class="payment-delivery-section">
+                <div class="delivery">
+                    <img src="assests/img/loc.svg">
+                    <span>Delivery Address</span>
+                    <div class="form-flex row1">
+                        <div>
+                            <p>Street Address</p>
+                            <input class="form-input" type="text" placeholder="123 Adhi Nagar">
+                        </div>
+                        <div>
+                            <p>Apartment / Suite</p>
+                            <input class="form-input" type="text" placeholder="Apt 4B ">
+                        </div>
+
+                    </div>
+
+                    <div class="form-flex row2">
+                        <div>
+                            <p>city</p>
+                            <input class="form-input" type="text" placeholder="San Fransico">
+                        </div>
+                        <div>
+                            <p>State</p>
+                            <input class="form-input" type="text" placeholder="CA">
+                        </div>
+                        <div>
+                            <p>ZIP code</p>
+                            <input class="form-input" type="text" placeholder="94103">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="payment">
+                    <div class="delivery">
+                        <img src="assests/img/payment.svg">
+                        <span>Payment Method</span>
+
+                        <div class="form-flex gap-cards  ">
+                            <div class="methods-pay">
+                                <label for="b1">Debit card</label>
+                                <input type="radio" id="b1">
+                            </div>
+                             <div class="methods-pay ">
+                                <label for="b2">PayPal</label>
+                                <input type="radio" id="b2">
+                            </div>
+                             <div class="methods-pay ">
+                                <label for="b3">Apple Pay</label>
+                                <input type="radio" id="b3">
+                            </div>
+
+                        </div>
+                        <div class="form-flex row1">
+                            <div>
+                                <p>Card number</p>
+                                <input class="form-input" type="text" placeholder="123**********">
+                            </div>
+
+                        </div>
+
+                        <div class="form-flex row2">
+                            <div>
+                                <p>Expiry Date</p>
+                                <input class="form-input" type="text" placeholder="mm/yyyy">
+                            </div>
+                            <div>
+                                <p>CVV</p>
+                                <input class="form-input" type="text" placeholder="***">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!--griddddddd separatorrrrr-->
+
+
+
+            <!--cart section inside checkout grid-->
+            <div class="cart">
+                <div class="cart-header">
+                    <span>Order Summary</span>
+                </div>
+
+
+
+                <div class="cart-items"></div>
+                <br>
+                <hr>
+
+
+
+                <div class="subtotal-container">
+                    <p>Subtotal</p>
+                    <p id="subtotal-price">$0</p>
+                </div>
+
+                <div class="subtotal-container">
+                    <p>Delivery Fee</p>
+                    <p id="subtotal-price">$4.50</p>
+                </div>
+
+                <div class="subtotal-container">
+                    <p>Taxes & Fees</p>
+                    <p id="subtotal-price">$5.82</p>
+                </div>
+                <hr>
+                <div class="total-container">
+                    <p>Total</p>
+                    <p id="total-price">$0</p>
+                </div>
+
+                <div class="place-order-btn">
+                    <button id="place-order" onclick="placeOrder()"><a id="aPlace">Place Order</a></button>
+                </div>
+
+                <p class="terms">By placing your order, you agree to Culinare's <span>&nbsp;Terms of Service</span></p>
+
+                <!-- <div class="secure-order">SECURE ENCRYPTED CHECKOUT</div> -->
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+     <footer class="footer">
+        <div>
+            <div class="footer-container">
+                <div>
+                    <h2 class="footer-logo">Culinare</h2>
+                    <p>Bringing the world's most exquisite
+                        flavors to your doorstep with elegance
+                        and speed.</p>
+                </div>
+                <div>
+                    <ul class="no-style-list">
+                        <li>Platforms</li>
+                        <li>About us</li>
+                        <li>Restaurants</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="no-style-list">
+                        <li>Support</li>
+                        <li>Privacy Policy</li>
+                        <li>Contact Support</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flexitend">
+                        <p class="page-nos-round1 centerit"><img src="assests/img/share.svg"></p>
+                        <p class="page-nos-round1 centerit"><img src="assests/img/web.svg"></p>
+                    </div>
+                    <p class="copyryt">© 2024 Culinare Epicurean. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="home.js"></script>
+</body>
+
+</html>
