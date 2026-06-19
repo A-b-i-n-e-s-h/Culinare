@@ -1,22 +1,53 @@
 <html>
+
 <head>
     <title>Register</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h2>Register Culinare</h2>
+    <div class="login-page">
+        <div class="login-row">
+            <div class="login-left">
+                <img src="assests/img/login-banner.png">
+            </div>
+            <div class="login-right">
+                <div class="login-right-container">
+                    <div class="logo-login">
+                        <img src="assests/img/Culinare.png">
+                        <p>Experience the finest restaurant-quality cuisine curated
+                            from the city's most prestigious kitchens.</p>
+                    </div>
+                    <div class="form-container marginBottom14px">
+                        <h2>Welcome</h2>
+                        <p class="marginBottom14px">Enter your details to manage your wealth.</p>
+                        <form id="registerForm">
+                            <label for="name" class="form-label">Enter your Name</label><br>
+                            <input type="text" id="name" class="form-control" placeholder="Name" required autofocus><br><br>
+                            <label for="email" class="form-label">Email Address</label><br>
+                            <input type="email" id="email" class="form-control" placeholder="Email" required><br><br>
+                            <label for="password" class="form-label">Password</label><br>
+                            <input type="password" id="password" class="form-control" placeholder="Password" required><br><br>
+                            <button type="submit" class="btn-login">Register</button>
 
-<form id="registerForm">
-    <input type="text" id="name" placeholder="Name" required><br><br>
-    <input type="email" id="email" placeholder="Email" required><br><br>
-    <input type="password" id="password" placeholder="Password" required><br><br>
-    <button type="submit">Register</button>
-    <button onclick='window.location.href="index.html"' >login</button>
+                            <p id="msg"></p>
+                        </form>
 
-</form>
+                        <div class="create-account">
+                            <hr>
+                            <div class="login-footer">
+                                <p>Did you have an account? </p>
+                                <a href="index.html"><span>Login Account</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<p id="msg"></p>
-
-<script src="register.js"></script>
+    <script src="register.js"></script>
 </body>
+
 </html>

@@ -78,6 +78,14 @@
 
 }
 
+.marginBottom14px {
+    margin-bottom: 14px;
+}
+
+#culinare-logo {
+    cursor: pointer;
+}
+
 #passwordError {
     font-weight: 400;
     font-size: xx-small;
@@ -245,6 +253,10 @@
     padding: 4px 14px;
     border-radius: 24px;
     color: white;
+    cursor: pointer;
+}
+.login-btn:hover{
+    background-color: #FF6B6B;
 }
 
 .login-btn button {
@@ -327,6 +339,10 @@
     border: 1px sold;
     border-radius: 12px;
     border-style: none;
+    cursor: pointer;
+}
+.find-food:hover{
+    background-color:#FF6B6B
 }
 
 .explore {
@@ -347,6 +363,7 @@
 
 .explore-flex p {
     font-weight: 600;
+    cursor: pointer;
 }
 
 .page-toggle {
@@ -375,6 +392,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.page-nos-round:hover {
+    background-color: #FF6B6B;
+    color: #AE2F34;
+}
+
+#star {
+    width: 16px;
+    height: 16px;
+    margin-left: 14px;
+}
+
+.flex-it {
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+
+}
+
+.rating {
+    font-size: 14px;
+}
+
+.rating-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 7px 12px;
+    margin-right: 12px;
+    border: none;
+    background: transparent;
+    background-color: #FF6B6B;
+    color: #AE2F34;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+
 }
 
 .flex-col {
@@ -382,6 +439,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    align-self: center;
 }
 
 .active-color {
@@ -446,9 +505,24 @@
     position: relative;
 
 }
-.pill{
-    top:0;
-    right:0;
+
+.pill {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: var(--white);
+    background-color: #AE2F34;
+    border: none;
+    border-radius: 18px;
+    padding: 6px 14px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.grey-text {
+    color: #5F5E5E;
 }
 
 .card1 img {
@@ -570,7 +644,7 @@
 /* menu page css */
 
 .menu-container {
-    width: 100;
+    width: 100%;
     background-color: #FCF8FF;
     padding: 24px 40px 60px 40px;
 
@@ -756,11 +830,6 @@
     margin-right: 30px;
 }
 
-.cart {}
-
-.delivery {}
-
-.payment {}
 
 .cart {
     width: 100%;
@@ -937,7 +1006,7 @@ hr {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     gap: 20px;
 
 

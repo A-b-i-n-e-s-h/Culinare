@@ -56,7 +56,11 @@ function updateQtyUI(id){
 }
 
 
-
+function switchToHome(){
+    setTimeout(()=>{
+        window.location.href='home.html';
+    },1000);
+}
 
 
 
