@@ -186,8 +186,8 @@
     align-items: center;
     margin-left: 25px;
     margin-right: 25px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 60px;
+    padding-right: 60px;
 
 }
 
@@ -263,18 +263,22 @@
 
 .banner {
     width: 100%;
+
 }
 
 .banner-img {
     width: 100%;
     position: relative;
+
 }
 
 .banner-img img {
     width: 100%;
     object-fit: cover;
     height: 466px;
+
 }
+
 
 #delight {
     font-size: 36px;
@@ -363,11 +367,14 @@
 
     border-radius: 50%;
     border: 1px solid #BFCABA;
-    padding: 16px 15px;
+    padding: 0px 0px;
     height: 60px;
     width: 60px;
     color: #40493D;
     background-color: #ECF5FE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-col {
@@ -436,6 +443,12 @@
     background: white;
     border-radius: 12px;
     height: 100%;
+    position: relative;
+
+}
+.pill{
+    top:0;
+    right:0;
 }
 
 .card1 img {
@@ -636,6 +649,7 @@
     width: 100%;
     height: fit-content;
     display: flex;
+    justify-content: center;
     flex: 1;
     flex-wrap: wrap;
     gap: 24px;

@@ -11,29 +11,33 @@ document.addEventListener("click", function (e) {
     }
 });
 
-function addToCart(product) {
-    const exist = cart.find(item => item.id === product.id);
-    if (exist) {
-        showPopup(product.name, product.id);
-    }
-    else {
-        cart.push({ ...product, quantity: 1 });
-    }
-    saveCart();
-}
-
 // function addToCart(product) {
 //     const exist = cart.find(item => item.id === product.id);
 //     if (exist) {
 //         showPopup(product.name, product.id);
 //     }
 //     else {
-//         item.quantity=1;
-//         const id = parseInt(e.target.dataset.id);
-//         console.log(`qty:1 is added ,${id}`);
+//         cart.push({ ...product, quantity: 1 });
 //     }
 //     saveCart();
 // }
+
+function addToCart(product) {
+    const exist = cart.find(item => item.id === product.id);
+    const qty = productQty[product.id] || 1;
+    if (exist) {
+        showPopup(product.name, product.id);
+        exist.quantity += qty;
+    }
+    else {
+        cart.push({ ...product, quantity: qty });
+        showPopup1(product.name, product.id);
+    }
+    productQty[product.id] = 1;
+    updateQtyUI(product.id);
+    saveCart();
+    renderCart();
+}
 
 
 
@@ -61,15 +65,12 @@ function renderCart() {
         container.style.margin = "10px";
         container.style.color = "#586062";
         document.getElementById("place-order").innerText = "SHOP NOW";
-       
-   
+
+
         subtotal();
         total();
         return;
     }
-
-
-
 
     container.innerHTML = "";
 
@@ -99,7 +100,7 @@ function renderCart() {
      `;
 
         container.appendChild(div);
-       
+
     });
 
     subtotal();
@@ -125,15 +126,15 @@ function subtotal() {
 
 function total() {
     let total = 0;
-      if (cart.length !== 0){
-        total=4.50 + 5.82;
+    if (cart.length !== 0) {
+        total = 4.50 + 5.82;
     }
-  
+
     cart.forEach(item => {
         total = total + (item.price * item.quantity);
     });
     let totalElement = document.getElementById("total-price");
-  
+
     totalElement.innerHTML = `$${total}`;
     saveCart();
 }
@@ -157,28 +158,28 @@ function placeOrder() {
 
 
 
-//quantity increase
+// //quantity increase
 
-function increase(id) {
-    const item = cart.find(p => p.id === id);
-    item.quantity++;
-    saveCart();
-    renderCart();
-}
+// function increase(id) {
+//     const item = cart.find(p => p.id === id);
+//     item.quantity++;
+//     saveCart();
+//     renderCart();
+// }
 
-//quantity decrease
-function decrease(id) {
+// //quantity decrease
+// function decrease(id) {
 
-    const item = cart.find(p => p.id === id);
-    if (item.quantity > 1) {
-        item.quantity--;
-    }
-    else {
-        removeItem(id);
-    }
-    saveCart();
-    renderCart();
-}
+//     const item = cart.find(p => p.id === id);
+//     if (item.quantity > 1) {
+//         item.quantity--;
+//     }
+//     else {
+//         removeItem(id);
+//     }
+//     saveCart();
+//     renderCart();
+// }
 
 
 
@@ -190,19 +191,29 @@ function decrease(id) {
 function showPopup(productName, id) {
     const popup = document.createElement("div");
     popup.className = "popup-status";
-    if (cart.find(p => p.id === id)) {
-        popup.innerHTML = `${productName} already added`;
-        console.log("already added");
-    } else {
-        popup.innerHTML = `${productName} added to Cart Successfully`;
-        console.log("Added successfully");
-    }
+    popup.innerHTML = ` ${productName} Quantity increased`;
+    console.log("already added");
     document.body.appendChild(popup);
     setTimeout(() => {
         popup.remove();
     }, 2000);
 
 }
+
+
+function showPopup1(productName, id) {
+    const popup = document.createElement("div");
+    popup.className = "popup-status";
+    popup.innerHTML = `${productName} added to Cart Successfully`;
+    console.log("Added successfully");
+    document.body.appendChild(popup);
+    setTimeout(() => {
+        popup.remove();
+    }, 2000);
+
+}
+
+
 
 
 // function showPopup1() {
