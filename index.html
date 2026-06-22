@@ -17,18 +17,18 @@
             <div class="login-right">
                 <div class="login-right-container">
                     <div class="logo-login">
-                        <img src="assests/img/Culinare.png">
+                        <img class="logosize" src="assests/img/Culinare.png">
                         <p>Experience the finest restaurant-quality cuisine curated
                             from the city's most prestigious kitchens.</p>
                     </div>
                     <div class="form-container">
-                        <h2>Welcome</h2>
+                        <h2 class="welcomesize">Welcome</h2>
                         <p>Enter your details to manage your wealth.</p>
-                        <form id="loginForm">
+                        <!-- <form id="loginForm">
                             <label for="input-email" class="form-label">Email Address</label><br>
                             <input type="text" class="form-control" id="input-email" placeholder="name@company.com"
                                 onkeyup="validateEmail()" autofocus required><br>
-                            <p id="emailError"></p><br>
+                            <p id="emailError">&nbsp;</p><br>
 
                             <div class="pass-flex">
                                 <label for="input-password" class="form-label">Password</label>
@@ -38,7 +38,7 @@
                             <input type="password" class="form-control" id="input-password" placeholder="Password"
                                 onkeyup="validatePassword()" required><br>
                             <p>
-                            <p id="passwordError"></p>
+                            <p id="passwordError">&nbsp;</p>
                             </p><br>
                             <div class="checkbox-flex">
                                 <input type="checkbox" id="keep-me-singned">
@@ -48,7 +48,40 @@
 
                             <button type="submit" class="btn-login">Sign In &RightArrow;</button>
                             <p id="msg"></p>
+                        </form> -->
+
+                        <form id="loginForm">
+
+                            <div class="input-group">
+                                <input type="text" id="input-email" onkeyup="validateEmail()" required placeholder=" ">
+                                <label for="input-email">Email Address</label>
+                            </div>
+                            <p id="emailError">&nbsp;</p>
+
+                            <!-- <div class="pass-flex">
+                                <span></span>
+                                <p>Forgot password?</p>
+                            </div> -->
+
+                            <div class="input-group">
+                                <input type="password" id="input-password" onkeyup="validatePassword()" required
+                                    placeholder=" ">
+                                <label for="input-password">Password</label>
+                            </div>
+                            <div class="pass-flex">
+                                <p id="passwordError"></p>
+                                <p class="forgot-text">Forgot password?</p>
+                            </div>
+                            <div class="checkbox-flex">
+                                <input type="checkbox" id="keep-me-signed">
+                                <label for="keep-me-signed" class="checkbox-content">Keep me signed in</label>
+                            </div>
+
+                            <button type="submit" class="btn-login">Sign In →</button>
+                            <p id="msg"></p>
+
                         </form>
+
                         <div class="create-account">
                             <hr>
                             <div class="login-footer">

@@ -3,7 +3,6 @@
 let emailError = document.getElementById("emailError");
 var passwordError = document.getElementById("passwordError");
 
-
 function validateEmail() {
     let email = document.getElementById("input-email");
     if (email.value.length == 0) {
@@ -89,4 +88,6 @@ document.getElementById("loginForm").addEventListener('submit', function (e) {
     }
 
 });
+
+
 

@@ -11,16 +11,24 @@
 <body>
     <header class="home-header">
         <div class="header-left">
-            <div class="logo">
-               <h2 onclick="return switchToHome()" id="culinare-logo">Culinare</h2>
+
+
+            <div class="hamburger" onclick="toggleNav()">
+                &#9776;
             </div>
-            <ul>
+
+            <div class="logo">
+                <h2 onclick="return switchToHome()" id="culinare-logo"><img src="assests/img/Culinare.png"></h2>
+            </div>
+
+            <ul id="nav-menu">
                 <li><a class="atag" href="home.html">Home</a></li>
                 <li class="li-active"><a class="atag  li-active" href="menu.html">Menu</a></li>
                 <li><a class="atag" href="checkout.html">Orders</a></li>
             </ul>
         </div>
         <div class="header-right gap24">
+
             <input type="search" id="home-search" placeholder="Search for dishes..">
             <div class="cart">
                 <a href="checkout.html"><img src="assests/img/cartlogo.svg" alt="cart"></a>
@@ -37,14 +45,20 @@
 
     <section class="menu-container">
         <div class="menu-grid">
-            <div class="sidebar">
+            <div class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">&#9776;</div>
+            <div class="sidebar" id="sidebar">
                 <h3>CATEGORIES</h3>
                 <ul>
-                    <li class="active-menu">Featured</li>
-                    <li>Main Courses</li>
-                    <li>Appetizers</li>
-                    <li>Desserts</li>
-                    <li>Bevarages</li>
+                    <li class="active-menu sidebar-icon-flex"><img class="sidebar-icon"
+                            src="assests/img/svg/Icon (1).svg"> Featured</li>
+                    <li class="sidebar-icon-flex"><img class="sidebar-icon" src="assests/img/svg/Icon (6).svg">Main
+                        Courses</li>
+                    <li class="sidebar-icon-flex"><img class="sidebar-icon"
+                            src="assests/img/svg/Icon (2).svg">Appetizers</li>
+                    <li class="sidebar-icon-flex"><img class="sidebar-icon" src="assests/img/svg/Icon (4).svg">Desserts
+                    </li>
+                    <li class="sidebar-icon-flex"><img class="sidebar-icon" src="assests/img/svg/Icon (5).svg">Bevarages
+                    </li>
 
                     <div class="free-delivery-box">
                         <h3>Free Delivery</h3>
@@ -57,6 +71,10 @@
             <div class="menubar">
                 <div class="food-card">
                     <img src="assests/img/food1.jpg">
+                    <div class="star-pill">
+                        <img src="assests/img/starr.svg">
+                        <p>4.7</p>
+                    </div>
                     <div class="food-des">
                         <div>
                             <h3>Truffle Tagliatelle</h3>
@@ -80,6 +98,10 @@
 
                 <div class="food-card">
                     <img src="assests/img/fooood2.png">
+                    <div class="star-pill">
+                        <img src="assests/img/starr.svg">
+                        <p>4.7</p>
+                    </div>
                     <div class="food-des">
                         <div>
                             <h3>Queen Margherita</h3>
@@ -103,6 +125,10 @@
 
                 <div class="food-card">
                     <img src="assests/img/food3.jpg">
+                    <div class="star-pill">
+                        <img src="assests/img/starr.svg">
+                        <p>4.7</p>
+                    </div>
                     <div class="food-des">
                         <div>
                             <h3>Avocado Artisan</h3>
@@ -126,6 +152,10 @@
 
                 <div class="food-card">
                     <img src="assests/img/food 4.png">
+                    <div class="star-pill">
+                        <img src="assests/img/starr.svg">
+                        <p>4.7</p>
+                    </div>
                     <div class="food-des">
                         <div>
                             <h3>Truffle Tagliatelle</h3>
@@ -149,6 +179,10 @@
 
                 <div class="food-card">
                     <img src="assests/img/food5.png">
+                    <div class="star-pill">
+                        <img src="assests/img/starr.svg">
+                        <p>4.7</p>
+                    </div>
                     <div class="food-des">
                         <div>
                             <h3>Truffle Tagliatelle</h3>
@@ -172,6 +206,10 @@
 
                 <div class="food-card">
                     <img src="assests/img/food6.png">
+                    <div class="star-pill">
+                        <img src="assests/img/starr.svg">
+                        <p>4.7</p>
+                    </div>
                     <div class="food-des">
                         <div>
                             <h3>Truffle Tagliatelle</h3>

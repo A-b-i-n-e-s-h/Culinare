@@ -12,7 +12,7 @@
     <header class="home-header">
         <div class="header-left">
             <div class="logo">
-                               <h2 onclick="return switchToHome()" id="culinare-logo">Culinare</h2>
+                <h2 onclick="return switchToHome()" id="culinare-logo"><img src="assests/img/Culinare.png"></h2>
             </div>
             <ul>
                 <li class="li-active atag ">Home</li>
@@ -21,7 +21,7 @@
             </ul>
         </div>
         <div class="header-right gap24">
-            <input type="search" id="home-search" placeholder="Search for dishes..">
+            <input type="search" id="home-search" class="home-search" placeholder="Search for dishes..">
             <div class="cart">
                 <img src="assests/img/cartlogo.svg" alt="cart">
             </div>
@@ -29,7 +29,7 @@
                 <img src="assests/img/notificatiologo.svg" alt="cart">
             </div>
             <div class="login-btn" id="login-transform">
-                <button onclick="window.location.href='index.html'">Login</button>
+                <button id="log-btn">Login</button>
             </div>
         </div>
 
@@ -38,6 +38,7 @@
     <section class="banner">
         <div class="banner-img">
             <img src="assests/img/banner.png">
+            <img class="loc" src="assests/img/loc.svg">
         </div>
 
         <div class="banner-row">
@@ -60,8 +61,8 @@
 
     <section class="explore">
         <div class="explore-flex">
-            <p>Explore by Category</p>
-            <p class="active-text active-text">View All &RightArrow;</p>
+            <p class="chef-text ">Explore by Category</p>
+            <p class=" fontw400 ">View All &RightArrow;</p>
         </div>
 
         <section class="page-toggle">
@@ -112,12 +113,13 @@
                 <div class="card1">
                     <img src="assests/img/pizza.png">
                     <h2 class="margin-b10 margin-l14">Artisanal Buffalo Margherita</h2>
-                    <p class="margin-b10 margin-l14">Sourced from the award-winning 'L'Antica Pizzeria'</p>
+                    <p class="margin-b10 margin-l14 food-des-home">Sourced from the award-winning 'L'Antica Pizzeria'
+                    </p>
                     <p class="pill">featured</p>
                     <div class="flex-it">
                         <div class="flex-it ">
                             <img id="star" src="assests/img/star.svg">
-                            <p class="rating grey-text">4.9(2k+) &nbsp; 25-35 min</p>
+                            <p class="rating red-text">4.9(2k+) &nbsp;<span class="grey-text">25-35 min</span></p>
                         </div>
                         <div>
                             <button class="rating-btn">&plus;</button>
@@ -126,22 +128,29 @@
                 </div>
                 <div class="chef-grid-row">
                     <div class="card2">
-                        <img src="assests/img/pizza.png">
+                        <img src="assests/img/sushi.png">
                         <h2 class="margin-b10 margin-l14">Omakase Signature Set</h2>
-                        <p class="margin-b10 margin-l14">12 pieces of chef-selected nigiri</p>
+                        <p class="margin-b10 margin-l14 food-des-home">12 pieces of chef-selected nigiri</p>
                         <div class="flex-rate">
                             <p class="active-text margin-l14 bold">$42.00</p>
-                            <p class="margin-l14 grey-text">45 min</p>
+                            <div class="flex-it-time ">
+                                <img class="time-icon" src="assests/img/time.svg">
+                                <span class=" marginRight14 grey-text">45 min</span>
+                            </div>
+
                         </div>
                     </div>
 
                     <div class="card2">
-                        <img src="assests/img/pizza.png">
+                        <img src="assests/img/bowl.png">
                         <h2 class="margin-b10 margin-l14">Harvest Zen Bowl</h2>
-                        <p class="margin-b10 margin-l14">12 pieces of chef-selected nigiri</p>
+                        <p class="margin-b10 margin-l14 food-des-home">12 pieces of chef-selected nigiri</p>
                         <div class="flex-rate">
                             <p class="active-text margin-l14 bold">$42.00</p>
-                            <p class="margin-l14 grey-text">45 min</p>
+                            <div class="flex-it-time">
+                                <img class="time-icon" src="assests/img/time.svg">
+                                <span class=" marginRight14 grey-text">45 min</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -192,6 +201,7 @@
 
 
     <script src="home.js"></script>
+    <script src="login.js"></script>
 </body>
 
 </html>

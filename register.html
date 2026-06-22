@@ -15,14 +15,15 @@
             <div class="login-right">
                 <div class="login-right-container">
                     <div class="logo-login">
-                        <img src="assests/img/Culinare.png">
+                        <img class="logosize" src="assests/img/Culinare.png">
                         <p>Experience the finest restaurant-quality cuisine curated
                             from the city's most prestigious kitchens.</p>
                     </div>
                     <div class="form-container marginBottom14px">
-                        <h2>Welcome</h2>
+                        <h2 class="welcomesize">Create an account</h2>
                         <p class="marginBottom14px">Enter your details to manage your wealth.</p>
-                        <form id="registerForm">
+
+                         <!-- <form id="registerForm">
                             <label for="name" class="form-label">Enter your Name</label><br>
                             <input type="text" id="name" class="form-control" placeholder="Name" required autofocus><br><br>
                             <label for="email" class="form-label">Email Address</label><br>
@@ -32,6 +33,28 @@
                             <button type="submit" class="btn-login">Register</button>
 
                             <p id="msg"></p>
+                        </form> -->
+
+                        <form id="registerForm">
+
+                            <div class="input-group">
+                                <input type="text" id="name" required placeholder=" ">
+                                <label for="name">Enter your Name</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="email" id="email" required placeholder=" ">
+                                <label for="email">Email Address</label>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="password" id="password" required placeholder=" ">
+                                <label for="password">Password</label>
+                            </div>
+
+                            <button type="submit" class="btn-login">Register</button>
+                            <p id="msg"></p>
+
                         </form>
 
                         <div class="create-account">

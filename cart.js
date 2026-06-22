@@ -6,7 +6,7 @@ document.addEventListener("click", function (e) {
         const id = parseInt(e.target.dataset.id);
         const product = products.find(p => p.id === id);
         if (!product) return;
-        showPopup(product.name, product.id);
+       // showPopup(product.name, product.id);
         addToCart(product);
     }
 });
@@ -26,8 +26,8 @@ function addToCart(product) {
     const exist = cart.find(item => item.id === product.id);
     const qty = productQty[product.id] || 1;
     if (exist) {
-        showPopup(product.name, product.id);
         exist.quantity += qty;
+        showPopup(product.name, product.id,qty);
     }
     else {
         cart.push({ ...product, quantity: qty });
@@ -62,9 +62,13 @@ function renderCart() {
         //let emptyCart = document.querySelector(".cart");
         container.innerHTML = "<p>Your cart is empty</p>";
         container.style.textAlign = "center";
-        container.style.margin = "10px";
+        container.style.margin = "22px";
         container.style.color = "#586062";
-        document.getElementById("place-order").innerText = "SHOP NOW";
+        let placeOrder=document.getElementById("place-order");
+        placeOrder.innerText = "SHOP NOW";
+        placeOrder.setAttribute("onclick", "goToMenu()");
+
+        
 
 
         subtotal();
@@ -139,8 +143,15 @@ function total() {
     saveCart();
 }
 
+
+function goToMenu(){
+    window.location.href="menu.html";
+}
+
+
 function placeOrder() {
-    alert("Your order has been placed 🥳 ");
+    //alert("Your order has been placed 🥳 ");
+    showPopupOrder();
     clearCart();
 
 }
@@ -184,14 +195,41 @@ function placeOrder() {
 
 
 
+function showPopupOrder(){
+    const popup = document.createElement("div");
+    popup.innerHTML = `
+    <div class="popup-order-container">
+        <div class="order-success">
+            <img src="assests/img/Order success.svg">
+        </div>
+        <div class="popup-order-content">
+               <div class="pop-icon-rev">
+                🎉
+            </div>
+            <div class="popup-order">
+                <p>Your Order has been Placed</p>
+                <p>Successfully</p>
+            </div>
+               <div class="pop-icon">
+                🎉
+            </div>
+        </div>
+    </div>
+    `;
+    console.log("oredered successfully");
+    document.body.appendChild(popup);
+    setTimeout(() => {
+        popup.remove();
+        window.location.href="menu.html";
+    }, 6000);
+}
 
 
 
-
-function showPopup(productName, id) {
+function showPopup(productName, id, qty) {
     const popup = document.createElement("div");
     popup.className = "popup-status";
-    popup.innerHTML = ` ${productName} Quantity increased`;
+    popup.innerHTML = ` ${productName} +${qty} added`;
     console.log("already added");
     document.body.appendChild(popup);
     setTimeout(() => {
@@ -201,7 +239,7 @@ function showPopup(productName, id) {
 }
 
 
-function showPopup1(productName, id) {
+function showPopup1(productName, id ,qty) {
     const popup = document.createElement("div");
     popup.className = "popup-status";
     popup.innerHTML = `${productName} added to Cart Successfully`;

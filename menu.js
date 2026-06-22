@@ -116,3 +116,36 @@ function switchToHome(){
 //     saveCart();
 //     renderCart();
 // }
+
+
+
+
+
+function toggleNav() {
+    const nav = document.getElementById("nav-menu");
+    nav.classList.toggle("active");
+}
+
+
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+}
+
+document.addEventListener("click", function (e) {
+    const nav = document.getElementById("nav-menu");
+    const hamburger = document.querySelector(".hamburger");
+
+    if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove("active");
+    }
+});
+
+document.addEventListener("click", function (e) {
+    const sidebar = document.getElementById("sidebar");
+    const hamburger = document.querySelector(".sidebar-toggle");
+
+    if (!hamburger.contains(e.target) && !sidebar.contains(e.target)) {
+        sidebar.classList.remove("active");
+    }
+});

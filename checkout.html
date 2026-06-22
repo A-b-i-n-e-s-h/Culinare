@@ -12,7 +12,7 @@
     <header class="home-header">
         <div class="header-left">
             <div class="logo">
-                               <h2 onclick="return switchToHome()" id="culinare-logo">Culinare</h2>
+                <h2 onclick="return switchToHome()" id="culinare-logo"><img src="assests/img/Culinare.png"></h2>
             </div>
             <ul>
                 <li><a class="atag" href="home.html">Home</a></li>
@@ -42,14 +42,14 @@
             <div class="payment-delivery-section">
                 <div class="delivery">
                     <img src="assests/img/loc.svg">
-                    <span>Delivery Address</span>
+                    <span class="boldfont16">Delivery Address</span>
                     <div class="form-flex row1">
                         <div>
-                            <p>Street Address</p>
+                            <p class="font12Brown">Street Address</p>
                             <input class="form-input" type="text" placeholder="123 Adhi Nagar">
                         </div>
                         <div>
-                            <p>Apartment / Suite</p>
+                            <p class="font12Brown">Apartment / Suite</p>
                             <input class="form-input" type="text" placeholder="Apt 4B ">
                         </div>
 
@@ -57,15 +57,15 @@
 
                     <div class="form-flex row2">
                         <div>
-                            <p>city</p>
+                            <p class="font12Brown">city</p>
                             <input class="form-input" type="text" placeholder="San Fransico">
                         </div>
                         <div>
-                            <p>State</p>
+                            <p class="font12Brown">State</p>
                             <input class="form-input" type="text" placeholder="CA">
                         </div>
                         <div>
-                            <p>ZIP code</p>
+                            <p class="font12Brown">ZIP code</p>
                             <input class="form-input" type="text" placeholder="94103">
                         </div>
 
@@ -75,39 +75,40 @@
                 <div class="payment">
                     <div class="delivery">
                         <img src="assests/img/payment.svg">
-                        <span>Payment Method</span>
+                        <span class="boldfont16">Payment Method</span>
 
                         <div class="form-flex gap-cards  ">
                             <div class="methods-pay">
                                 <label for="b1">Debit card</label>
-                                <input type="radio" id="b1">
+                                <input type="radio" id="b1" name="payment">
                             </div>
-                             <div class="methods-pay ">
+                            <div class="methods-pay ">
                                 <label for="b2">PayPal</label>
-                                <input type="radio" id="b2">
+                                <input type="radio" id="b2" name="payment">
                             </div>
-                             <div class="methods-pay ">
+                            <div class="methods-pay ">
                                 <label for="b3">Apple Pay</label>
-                                <input type="radio" id="b3">
+                                <input type="radio" id="b3" name="payment">
                             </div>
 
                         </div>
-                        <div class="form-flex row1">
-                            <div>
-                                <p>Card number</p>
+                        <div class="row1">
+                            <div class="form-input-lock">
+                                <p class="font12Brown">Card number</p>
                                 <input class="form-input" type="text" placeholder="123**********">
+                                <img src="assests/img/lock.svg" alt="lock">
                             </div>
 
                         </div>
 
                         <div class="form-flex row2">
                             <div>
-                                <p>Expiry Date</p>
-                                <input class="form-input" type="text" placeholder="mm/yyyy">
+                                <p class="font12Brown">Expiry Date</p>
+                                <input class="form-input" type="month" placeholder="mm/yyyy">
                             </div>
                             <div>
-                                <p>CVV</p>
-                                <input class="form-input" type="text" placeholder="***">
+                                <p class="font12Brown">CVV</p>
+                                <input class="form-input" type="number" placeholder="***" maxlength="3">
                             </div>
 
                         </div>
@@ -130,11 +131,8 @@
 
 
                 <div class="cart-items"></div>
-                <br>
+
                 <hr>
-
-
-
                 <div class="subtotal-container">
                     <p>Subtotal</p>
                     <p id="subtotal-price">$0</p>
@@ -161,11 +159,8 @@
 
                 <p class="terms">By placing your order, you agree to Culinare's <span>&nbsp;Terms of Service</span></p>
 
-                <!-- <div class="secure-order">SECURE ENCRYPTED CHECKOUT</div> -->
             </div>
-
-
-
+            <!-- <div class="secure-order">SECURE ENCRYPTED CHECKOUT</div> -->
         </div>
 
     </section>
@@ -176,7 +171,7 @@
 
 
 
-     <footer class="footer">
+    <footer class="footer">
         <div>
             <div class="footer-container">
                 <div>
