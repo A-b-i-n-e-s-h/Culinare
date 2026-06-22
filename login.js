@@ -70,7 +70,9 @@ document.getElementById("loginForm").addEventListener('submit', function (e) {
 
     if (user) {
         localStorage.setItem("loggedUser", JSON.stringify(user));
-        document.getElementById("msg").innerHTML = `Logged in ${user.name}`;
+        const name = (user.name).length > 18 ? (user.name).slice(0, 15) + '...' : (user.name);
+        
+        document.getElementById("msg").innerHTML = `Logged in ${name}`;
         document.getElementById("msg").style.color = "green";
         document.getElementById("msg").style.marginTop = "10px";
         setTimeout(() => {

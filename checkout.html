@@ -22,14 +22,14 @@
         </div>
         <div class="header-right gap24">
             <input type="search" id="home-search" placeholder="Search for dishes..">
-            <div class="cart">
+            <div class="cart-logo">
                 <img src="assests/img/cartlogo.svg" alt="cart">
             </div>
             <div class="notification-logo">
                 <img src="assests/img/notificatiologo.svg" alt="cart">
             </div>
             <div class="login-btn" id="login-transform">
-                <button onclick="window.location.href='index.html'">Login</button>
+                <button id="login-button" onclick="window.location.href='index.html'">Login</button>
             </div>
         </div>
 
@@ -41,8 +41,11 @@
         <div class="checkout-grid">
             <div class="payment-delivery-section">
                 <div class="delivery">
-                    <img src="assests/img/loc.svg">
-                    <span class="boldfont16">Delivery Address</span>
+                    <div class="flex-center">
+                        <img src="assests/img/loc.svg">
+                        <span class="boldfont16">Delivery Address</span>
+                    </div>
+
                     <div class="form-flex row1">
                         <div>
                             <p class="font12Brown">Street Address</p>
@@ -50,7 +53,7 @@
                         </div>
                         <div>
                             <p class="font12Brown">Apartment / Suite</p>
-                            <input class="form-input" type="text" placeholder="Apt 4B ">
+                            <input class="form-input width150 " type="text" placeholder="Apt 4B ">
                         </div>
 
                     </div>
@@ -74,8 +77,11 @@
                 </div>
                 <div class="payment">
                     <div class="delivery">
-                        <img src="assests/img/payment.svg">
-                        <span class="boldfont16">Payment Method</span>
+                        <div class="flex-center">
+                            <img src="assests/img/payment.svg">
+                            <span class="boldfont16">Payment Method</span>
+                        </div>
+
 
                         <div class="form-flex gap-cards  ">
                             <div class="methods-pay">

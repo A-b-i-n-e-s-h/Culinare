@@ -4,7 +4,8 @@ let user = JSON.parse(localStorage.getItem("loggedUser"));
 let btn = document.getElementById("log-btn");
 
 if (user) {
-    document.getElementById("login-transform").innerHTML = `${user.name}`;
+    const name = (user.name).length > 18 ? (user.name).slice(0, 15) + '...' : (user.name);
+    document.getElementById("login-transform").innerHTML = `${name}`;
 
 
     // document.getElementById("login-transform").addEventListener("mouseover", () => {

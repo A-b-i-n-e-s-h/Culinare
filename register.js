@@ -24,7 +24,7 @@ form.addEventListener('submit', function (e) {
         return;
 
     }
-    let newUsers = {
+    let newUser = {
         name: name,
         email: email,
         password: password,
@@ -32,11 +32,13 @@ form.addEventListener('submit', function (e) {
 
     };
     console.log("new user created");
-    users.push(newUsers);
+    users.push(newUser);
 
     localStorage.setItem("users", JSON.stringify(users));
     document.getElementById("msg").style.color = "green";
-    document.getElementById("msg").innerText = `Registered Successfully ${name}!`;
+    const trimmedName = (newUser.name).length > 18 ? (newUser.name).slice(0, 15) + '...' : (newUser.name);
+
+    document.getElementById("msg").innerText = `Registered Successfully ${trimmedName}!`;
 
     setTimeout(() => {
         window.location.href = "index.html";
